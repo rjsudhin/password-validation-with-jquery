@@ -9,12 +9,44 @@ body {
   font-family: Poppins, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
+  padding: 1rem ;
 }
 
 .container {
   margin: 1rem auto;
-  border: 1px solid black;
   width: 100%;
   max-width: 950px;
   min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: #496666;
+  border-radius: 2.5rem;
+  padding-left: 1.5rem;
 }
+
+.container .form-section {
+  display: flex;
+  flex-direction: column;
+  .header {
+    padding: 1rem 0;
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #ffff;
+      text-shadow: 1px 1px 0 0 #252525;
+    }
+  }
+}
+.container div {
+  flex: 1 1 50%;
+}
+
+.container > .hero-section {
+  background-color: blue;
+  background-image: url('./images/eriscolors-woman-6805467_1280.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2.5rem;
+}
+

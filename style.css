@@ -28,6 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   .header {
+    flex: 1 1 30%;
     padding: 1rem 0;
     .logo {
       font-weight: bold;
@@ -35,6 +36,62 @@ body {
       color: #302f2f;
       text-shadow: 1px 1px 0 0 #252525;
     }
+  }
+
+  .form-container {
+    flex: 1 1 70%;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    .heading {
+      text-align: center;
+      font-family: inherit;
+      color: #302f2f;
+      font-size: 1.5rem;
+    }
+
+    .description {
+      text-align: center;
+      color: #302f2f;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      .row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        label, input, button {
+          width: 70%;
+          margin-left: 60px;
+          height: 40px;
+        }
+
+        input {
+          padding-left: 1rem;
+        }
+        
+        input, button {
+          border-radius: 0.5rem;
+          border: none;
+          box-shadow: 1px 1px 1px #b6b1b1;
+
+        }
+
+        button {
+          margin-top: 1rem;
+          background-color: rgb(236, 186, 47);
+          font-family: inherit;
+          font-weight: bold,;
+          color: #ffff;
+          font-size: 1rem;
+        }
+      }
+    }
+
   }
 }
 .container div {

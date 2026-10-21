@@ -72,8 +72,17 @@ body {
 
         input {
           padding-left: 1rem;
+          outline: none;
         }
-        
+
+        input.has-error {
+          border: 1px solid red;
+        }
+
+        input.pwd-success {
+          border: 1px solid green;
+        }
+
         input, button {
           border-radius: 0.5rem;
           border: none;

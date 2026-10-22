@@ -109,7 +109,6 @@ body {
 }
 
 .container > .hero-section {
-  background-color: blue;
   background-image: url('./images/eriscolors-woman-6805467_1280.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -117,3 +116,26 @@ body {
   border-radius: 2.5rem;
 }
 
+
+@media (max-width: 800px) {
+  body {
+    background-color: #252525;
+  }
+
+  .container {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .container > .hero-section {
+    background-image: none;
+    flex: unset;
+  }
+
+  .form-section {
+    border: 1px solid black;
+    padding: 0 1rem;
+
+  }
+}

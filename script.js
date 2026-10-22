@@ -1,16 +1,29 @@
 $(document).ready(function() {
-  $('input').blur(function() {
-    let pass = $('input[name=newPassword]').val()
-    let repass = $('input[name=reenterPass').val()
+  console.log('working done')
 
-    if ( $('input[name=newPassword]').val() != $('input[name=reenterPass]').val() ) {
-      console.log('they are not the same')
-      $('#newPwd').removeClass().addClass('has-error')
-      $('#rePwd').removeClass().addClass('has-error')
-    } else {
-      $('#newPwd').removeClass().addClass('pwd-success')
-      $('#rePwd').removeClass().addClass('pwd-success')
-    }
-  
+  $('#creationPasswordForm').validate({
+    rules: {
+      newPassword: {
+        required: true,
+        minlength: 5,
+      },
+      reenterPassword: {
+        required: true,
+        minlength: 5,
+        equalTo: "#newPwd"
+      }
+    },
+
   })
+
+  $('input').blur(function() {
+    checkingFields()
+
+  })
+
 })
+
+
+function checkingFields() {
+  console.log('fields are checking everytime is fine')
+}

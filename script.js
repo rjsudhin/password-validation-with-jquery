@@ -1,22 +1,24 @@
 $(document).ready(function() {
   console.log('working done')
-
   $('#creationPasswordForm').validate({
     rules: {
       newPassword: {
         required: true,
-        minlength: 5,
+        minlength: 6,
+        maxlength: 12,
+        regexp: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+]).+$/,
       },
       reenterPassword: {
         required: true,
-        minlength: 5,
-        equalTo: "#newPwd"
+        equalTo: "#newPwd",
       }
     },
 
     messages: {
       newPassword: {
-        required: "Please enter password"
+        required: "Please enter a password",
+        minlength: "Your password must be at least 6 characters",
+        maxlength: "Your password cannot exceed 12 characters",
       }, 
 
       reenterPassword: {
@@ -26,14 +28,5 @@ $(document).ready(function() {
 
   })
 
-  $('input').blur(function() {
-    checkingFields()
-
-  })
-
 })
 
-
-function checkingFields() {
-  console.log('fields are checking everytime is fine')
-}

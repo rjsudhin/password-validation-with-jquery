@@ -14,6 +14,16 @@ $(document).ready(function() {
       }
     },
 
+    messages: {
+      newPassword: {
+        required: "Please enter password"
+      }, 
+
+      reenterPassword: {
+        required: "Please re enter the same password"
+      }
+    }
+
   })
 
   $('input').blur(function() {
